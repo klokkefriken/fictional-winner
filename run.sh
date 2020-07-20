@@ -2,15 +2,17 @@
 
 #update repos
 
-apt update
+apt update &&
 
 #fix errors in dpkg 
 
-dpkg-reconfigure
+sudo dpkg --configure -a &&
 
 #fix erorrs in apt
 
-apt-get -f install
+apt-get -f install &&
+
+echo done
 
 
 
