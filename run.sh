@@ -1,18 +1,26 @@
 #!/bin/bash
 
-#update repos
+# Update repos
 
 apt update &&
 
-#fix errors in dpkg 
+# Fix errors in dpkg 
 
 sudo dpkg --configure -a &&
 
-#fix erorrs in apt
+# Fix erorrs in apt
 
 apt-get -f install &&
 
+
+## Update grub
+
+update-grub &&
+
+#   other stuff
+
+
+sudo apt autoremove &&
+
+
 echo done
-
-
-
